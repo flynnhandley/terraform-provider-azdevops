@@ -1,0 +1,19 @@
+{
+    "name": "terraform-enterprise-api-client",
+    "devDependencies": {
+        "semantic-release": "^15.9.15",
+        "@semantic-release/github": "^5.0.5"
+    },
+    "release": {
+        "_comment": "Override prepare as it defaults to @semantic-release/npm which will throw an error",
+
+        "verifyConditions": [
+            "@semantic-release/github"
+        ],
+        "publish": [
+            {
+                "path": "@semantic-release/github"
+            }
+        ]
+    }
+}
